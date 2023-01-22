@@ -20,7 +20,6 @@ from django.urls import path, include
 
 from book.views import pageNotFound
 
-
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', include('book.urls')),
