@@ -278,7 +278,7 @@ ul.content-table li a:hover {color: #F0711C;}
 	font-size: 20px;
 	font-family: Yandex Sans Display Light;
 }
-.content-text h1 {font-size: 32px;}
+.content-text h1 {color: black;}
 
 ul.lang-list {
 	list-style: none;
@@ -402,3 +402,40 @@ ul.lang-list li a:hover {color: #fdc073;}
     font-size: 16px;
 }
 
+/* paginator */
+.list-pages {
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+.list-pages ul {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+}
+.list-pages ul li {
+	display: inline-block;
+	margin: 0 20px 0 0;
+}
+.list-pages a {
+	color: #000;
+	font-size: 24px;
+	text-decoration: none;
+}
+.list-pages .page-num, .page-num-selected {
+	display: inline-block;
+	width: 60px;
+	height: 44px;
+	border: 1px solid black;
+	border-radius: 30px;
+}
+.list-pages .page-num:hover {
+	box-shadow: 3px 3px 1px #d0d0d0;
+}
+.list-pages .page-num-selected {
+	border: none;
+	color: #000;
+	font-size: 20px;
+}
+.list-pages .page-num-selected:hover {
+	box-shadow: none;
+}

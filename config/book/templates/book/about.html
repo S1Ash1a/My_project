@@ -1,6 +1,10 @@
 {% extends 'book/base.html' %}
 
 {% block content %}
-<h1>{{title}}</h1>
-<p>Содержание
+    <h1>{{title}}</h1>
+
+    {% for contact in page_obj %}
+        <p>{{ contact }}</p>
+    {% endfor %}
+
 {% endblock %}

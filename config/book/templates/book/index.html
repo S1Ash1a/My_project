@@ -11,10 +11,12 @@
 	                <p><img class="img-article-left thumb" src="{{p.photo.url}}"></p>
                 {% endif %}
 
-        <li><h2>{{ p.title }}</h2>
-            <p>{{ p.content|linebreaks|truncatewords:50}}</p>
-            <div class="clear"></div>
-            <p class="link-read-post"><a href="{{ p.get_absolute_url }}">Читать пост</a></p>
+                    <h1>{{p.title}}</h1>
+	            {% autoescape on %}
+	            {{p.content|linebreaks|truncatewords:50}}
+	            {% endautoescape %}
+			<div class="clear"></div>
+			<p class="link-read-post"><a href="{{ p.get_absolute_url }}">Читать пост</a></p>
         </li>
     {% endfor %}
 </ul>
