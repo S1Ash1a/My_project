@@ -61,8 +61,11 @@ class AddPage(DataMixin, CreateView, LoginRequiredMixin):
         return dict(list(context.items()) + list(c_def.items()))
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e1673953bd0779a3a8143234054b5b49b995eb9b
     # def addpage(request):
 #     if request.method == 'POST':
 #         form = AddPostForm(request.POST, request.FILES)
@@ -92,6 +95,12 @@ class ContactFormView(DataMixin, FormView):
         print(form.cleaned_data)
         return redirect('home')
 
+<<<<<<< HEAD
+=======
+# def login(request):
+#     return HttpResponse("Авторизация")
+
+>>>>>>> e1673953bd0779a3a8143234054b5b49b995eb9b
 
 def pageNotFound(request, exception):
     return HttpResponseNotFound("Not Found")

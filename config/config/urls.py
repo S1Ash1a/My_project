@@ -22,11 +22,23 @@ from book.views import pageNotFound
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+<<<<<<< HEAD
     path('captcha/', include('captcha.urls')),
+=======
+>>>>>>> e1673953bd0779a3a8143234054b5b49b995eb9b
     path('', include('book.urls')),
 ]
 
 if settings.DEBUG:
+<<<<<<< HEAD
+=======
+    # import debug_toolbar
+    #
+    # urlpatterns = [
+    #     path('__debug__/', include(debug_toolbar.urls)),
+    # ] + urlpatterns
+
+>>>>>>> e1673953bd0779a3a8143234054b5b49b995eb9b
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = pageNotFound

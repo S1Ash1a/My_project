@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+<<<<<<< HEAD
     "captcha",
+=======
+
+>>>>>>> e1673953bd0779a3a8143234054b5b49b995eb9b
     "book.apps.BookConfig",
 
 ]
@@ -129,6 +133,7 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+<<<<<<< HEAD
 
 CACHES = {
     'default': {
@@ -136,3 +141,5 @@ CACHES = {
         'LOCATION': os.path.join(BASE_DIR, 'coolsite_cache'),
     }
 }
+=======
+>>>>>>> e1673953bd0779a3a8143234054b5b49b995eb9b
