@@ -28,17 +28,6 @@ class ArticlesHome(DataMixin, ListView):
         return Articles.objects.filter(is_published=True)           #отображает все отмеченые публикации#
 
 
-# def index(request):
-#     posts = Articles.objects.all()
-#     data = {
-#         'posts': posts,      отображение через функции
-#         'menu': menu,
-#         'title': 'Главная страница'
-#     }
-#     return render(request, 'book/index.html', data)
-
-
-
 def about(request):
     contact_list = Articles.objects.all()
     paginator = Paginator(contact_list, 3)
@@ -61,26 +50,6 @@ class AddPage(DataMixin, CreateView, LoginRequiredMixin):
         return dict(list(context.items()) + list(c_def.items()))
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> e1673953bd0779a3a8143234054b5b49b995eb9b
-    # def addpage(request):
-#     if request.method == 'POST':
-#         form = AddPostForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             # print(form.cleaned_data)
-#             form.save()
-#             return redirect('home')
-#     else:
-#         form = AddPostForm()
-#     return render(request, 'book/addpage.html', {'form': form, 'menu': menu, 'title': 'Добавление статьи'})
-
-
-# def contact(request):
-#     return HttpResponse("Обратная связь")
-
 class ContactFormView(DataMixin, FormView):
     form_class = ContactForm
     template_name = 'book/contact.html'
@@ -95,12 +64,6 @@ class ContactFormView(DataMixin, FormView):
         print(form.cleaned_data)
         return redirect('home')
 
-<<<<<<< HEAD
-=======
-# def login(request):
-#     return HttpResponse("Авторизация")
-
->>>>>>> e1673953bd0779a3a8143234054b5b49b995eb9b
 
 def pageNotFound(request, exception):
     return HttpResponseNotFound("Not Found")
@@ -116,22 +79,6 @@ class ShowPost(DataMixin, DetailView):
         context = super().get_context_data(**kwargs)
         c_def = self.get_user_context(title=context['post'])
         return dict(list(context.items()) + list(c_def.items()))
-
-
-
-
-
-# def show_post(request, post_slug):
-#     post = get_object_or_404(Articles, pk=post_slug)
-#
-#     context = {
-#         'post': post,
-#         'menu': menu,
-#         'title': post.title,
-#         'cat_selected': post,
-#     }
-#
-#     return render(request, 'book/post.html', context=context)
 
 
 class RegisterUser(DataMixin, CreateView):
